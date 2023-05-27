@@ -16,4 +16,8 @@ public class DiscountCalculator implements Visitor {
     public double calculateComputerDiscount(Computer computer) {
         return computer.getPrice() * (discountRate/100.0) + 100.0;
     }
+
+    public double calculateHeadsetDiscount(Headset headset) {
+        return headset.getPrice() * (discountRate/100.0) + 20;
+    }
 }
