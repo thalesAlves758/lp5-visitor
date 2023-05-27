@@ -5,6 +5,10 @@ public class DiscountCalculator implements Visitor {
         this.discountRate = discountRate;
     }
 
+    public double applyDiscount(Product product) {
+        return product.accept(this);
+    }
+
     public double calculateSmartphoneDiscount(Smartphone smartphone) {
         return smartphone.getPrice() * (discountRate/100.0);
     }
